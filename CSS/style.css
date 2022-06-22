@@ -5,11 +5,9 @@ body {
 }
 .hvr {
   resize: none;
+  width: fixed;
   opacity: 1;
   width: 100px;
-}
-.fcp {
-  
 }
 .slidecontainer {
   width: 50%;
