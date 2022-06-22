@@ -3,6 +3,11 @@ body {
     color: white;
     padding-left: 0px;
 }
+.hvr {
+  resize: none;
+  opacity: 1;
+  width: 100px;
+}
 .slidecontainer {
   width: 50%;
   padding: 10px;
