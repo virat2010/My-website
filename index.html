@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>School form</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <div class="w3-container w3-blue">
+        <h2>Home Page - Student Form</h2>
+    </div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="topnav" id="myTopnav">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./Other Pages/Beveled Square.html">Beveled Square</a>
+        <a href="./Other Pages/Other Projects.html">Other Projects</a>
+        <a href="./Other Pages/About Me.html">About Me</a>
+        <a href="./Every Other Page.html">All Pages</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</head>
+
+<body>
+    <script src="./Tabs.js"></script>
+    <form class="w3-container"><br>
+    <div style="padding-bottom: 10px;">
+    <label>Your full name:</label>
+    </div>
+    <input type="text" id="name" class="w3-input" placeholder="Your name" style="width: 50%;"><br>
+    <p>Please enter age:</p>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <output type="text" id="ageV"></output>
+    </div>
+    
+    <button type="button" id="myButton" class="button button1">submit</button>
+    </form>
+    <div style="padding-left: 20px;">
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">My Projects</button>
+        <div class="dropdown-content">
+          <a href="./index.html">Student Form</a>            
+          <a href="./Other Pages/Beveled Square.html">Beveled Square</a>
+          <a href="./Other Pages/1stProject.html">Fun Canvas Project</a>
+        </div>
+    </div>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- This is based on DillingerLee's great template here:
+https://github.com/Team-Code/KA_Offline -->
+<html>
+
+<head>
+    <title>Fun Canvas Project</title>
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <p align="center">
+        <canvas id="mycanvas"></canvas>
+    </p>
+</body>
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+<script>
+    var sketchProc = function(processingInstance) {
+        with(processingInstance) {
+            var pageWidth = document.documentElement.clientWidth;
+            var pageHeight = document.documentElement.clientHeight;
+            size(pageWidth, pageHeight);
+            frameRate(960);
+
+            // ProgramCodeGoesHere
+            var Walker = function() {
+                this.x = width / 2;
+                this.y = height / 2;
+            };
+
+            Walker.prototype.display = function() {
+                strokeWeight(2);
+                stroke(this.x, this.y, random(this.x, this.y));
+                point(this.x, this.y);
+            };
+
+            // Randomly move right, left, down or up
+            Walker.prototype.walk = function() {
+                var r = random(1);
+
+                if (r < 0.1) {
+                    this.x++;
+                } else if (r < 0.2) {
+                    this.x--;
+                } else if (r < 0.4) {
+                    this.y++;
+                } else {
+                    this.y--;
+                }
+                if (this.y < 0) {
+                    this.y = pageHeight;
+                }
+            };
+
+            var w = new Walker();
+
+            draw = function() {
+                w.walk();
+                w.display();
+            };
+        }
+    };
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc);
+</script>
+
+</html>
