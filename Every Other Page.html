@@ -83,9 +83,9 @@ body {
 </head>
 <body>
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Clock')" >Clock</button>
-  <button class="tablinks" onclick="openTab(event, 'Playground')" id="defaultOpen">Playground</button>
-  <button class="tablinks" onclick="openTab(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openTab(event, 'Clock')" id="defaultOpen">Clock</button>
+  <button class="tablinks" onclick="openTab(event, 'Playground')">Playground</button>
+  <button class="tablinks" onclick="openTab(event, 'GitHub')">GitHub</button>
   <button class="tablinks" onclick="openTab(event, 'New Delhi')">New Delhi</button>
   <button class="tablinks" onclick="openTab(event, 'Game')">Game</button>
 </div>
@@ -105,10 +105,14 @@ body {
   <p id="rest" style="display:none;">You found the hidden content!</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
+<div id="GitHub" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <h3>GitHub</h3>
+  <p>All of my website is available at GitHub! Here's a view! Scroll around, click around.<br>
+  Even though it shows that my brother contributed to the website, it was just me signing in to his account.<br>
+  Once I signed in to his account, I made changes through his. Instead of mines.
+  </p>
+  <iframe src="https://github.com/virat2010/virat2010.github.io" style="width:100%; height: 500px;"></iframe>
 </div>
 <div id="New Delhi" class="tabcontent">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
