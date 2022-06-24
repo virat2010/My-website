@@ -3,11 +3,11 @@ body {
     color: white;
     padding-left: 0px;
 }
-.hvr {
+.hvr1 {
   resize: none;
-  width: fixed;
+  padding: 10px;
+  margin-left: -10px;
   opacity: 1;
-  width: 100px;
 }
 .slidecontainer {
   width: 50%;
