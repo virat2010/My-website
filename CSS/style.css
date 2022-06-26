@@ -248,3 +248,22 @@ h1 {
   border: 1px solid #ccc;
   border-top: none;
 }
+.animate {
+  position: relative;
+  left: 10px;
+  top : 10px;
+}
+.anim {
+  background-color: white; 
+  color: black; 
+  border: 2px solid hsl(158, 40%, 50%);
+  -webkit-transition: .5s;
+  border-radius: 5px;
+}
+
+.anim:hover {
+  background-color: hsl(158, 40%, 50%);
+  color: white;
+  -webkit-transition: .5s;
+  border-radius: 5px;
+}
