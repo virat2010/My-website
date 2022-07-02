@@ -1,22 +1,46 @@
-var exp = "it's y=x+17";
+// Set Dimensions
+const xSize = 500; 
+const ySize = 500;
+const margin = 40;
+const xMax = xSize - margin*2;
+const yMax = ySize - margin*2;
 
-// Generate values
-var xValues = [];
-var yValues = [];
-for (var x = 0; x <= 10; x += 1) {
-  yValues.push(eval(exp));
-  xValues.push(x);
+// Create Random Points
+const numPoints = 100;
+const data = [];
+for (let i = 0; i < numPoints; i++) {
+  data.push([Math.random() * xMax, Math.random() * yMax]);
 }
 
-// Define Data
-var data = [{
-  x: xValues,
-  y: yValues,
-  mode: "lines"
-}];
+// Append SVG Object to the Page
+const svg = d3.select("#myPlot")
+  .append("svg")
+  .append("g")
+  .attr("transform","translate(" + margin + "," + margin + ")");
 
-// Define Layout
-var layout = {title: "y = " + exp};
+// X Axis
+const x = d3.scaleLinear()
+  .domain([0, 500])
+  .range([0, xMax]);
 
-// Display using Plotly
-Plotly.newPlot("myPlot", data, layout);
+svg.append("g")
+  .attr("transform", "translate(0," + yMax + ")")
+  .call(d3.axisBottom(x));
+
+// Y Axis
+const y = d3.scaleLinear()
+  .domain([0, 500])
+  .range([ yMax, 0]);
+
+svg.append("g")
+  .call(d3.axisLeft(y));
+
+// Dots
+svg.append('g')
+  .selectAll("dot")
+  .data(data).enter()
+  .append("circle")
+  .attr("cx", function (d) { return d[0] } )
+  .attr("cy", function (d) { return d[1] } )
+  .attr("r", 3)
+  .style("fill", "Red");
