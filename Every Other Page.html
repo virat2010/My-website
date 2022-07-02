@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./jQueries.js"></script>
     <script src="./JS/page.js"></script>
+    <script src="./JS/asdasd.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <title>Other Pages</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -103,6 +105,7 @@ body {
   <button class="tablinks" onclick="openTab(event, 'GitHub')">GitHub</button>
   <button class="tablinks" onclick="openTab(event, 'Fun Stuff')">Fun Stuff</button>
   <button class="tablinks" onclick="openTab(event, 'Game')">Game</button>
+  <button class="tablinks" onclick="openTab(event, 'Vienna')">Vienna</button>
 </div>
 <div id="Clock" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
@@ -145,7 +148,7 @@ body {
 <div id="Vienna" class="tabcontent">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <h3>Vienna</h3>
-    <p>Vienna is the capital of Austria.</p>
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
 </div>
 <div id="Game" class="tabcontent">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
