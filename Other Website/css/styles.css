@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.zoom {
+  transition: transform .2s;
+}
+.zoom:hover {
+  transform: scale(1.15);
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
